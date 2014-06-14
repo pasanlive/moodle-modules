@@ -21,5 +21,18 @@
         <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
       </INDEXES>
     </TABLE>
+    
+    <TABLE NAME="pasantest_course_selection" COMMENT="Selected courses by students">
+    	<FIELDS>
+    		<FIELD NAME="studentid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="courseid"/>
+    		<FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Selected course id" PREVIOUS="studentid" NEXT="coursename"/>
+    		<FIELD NAME="coursename" TYPE="char" LENGTH="255" NOTNULL="true" SEQUNECE="false" COMMENT="Selected course name" PREVIOUS="courseid" NEXT="timecreated"/>
+    		<FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="course_name" NEXT="timemodified"/>
+        	<FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" PREVIOUS="timecreated"/>
+    	</FIELDS>
+    	<KEYS>
+    		<KEY NAME="primary" TYPE="primary" FIELDS="studentid, courseid"></KEY>
+    	</KEYS>
+    </TABLE>
   </TABLES>
 </XMLDB>

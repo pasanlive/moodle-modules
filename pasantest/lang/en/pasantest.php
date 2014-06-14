@@ -17,3 +17,8 @@ $string['pasantestname_help'] = 'This is the content of the help tooltip associa
 $string['pasantest'] = 'pasantest';
 $string['pluginadministration'] = 'pasantest administration';
 $string['pluginname'] = 'pasantest';
+
+// Content of Course selction page
+$string['student_name_caption'] = 'Student Name';
+$string['course_list_caption'] = 'Please select courses to enroll';
+
